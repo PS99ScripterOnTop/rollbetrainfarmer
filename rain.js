@@ -3,9 +3,9 @@ function start() {
 
     const config = {
         buttonSelector: 'button.octagonal.before.after.hoverable.e593a4bf',
-        checkInterval: 10,
-        clickInterval: 120,
-        debugMode: true,
+        checkInterval: 1,
+        clickInterval: 1,
+        debugMode: false,
         autoStart: true
     };
 
