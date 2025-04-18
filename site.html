@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rollbet Hub Key</title>
+  <title>Your Key</title>
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -63,11 +63,25 @@
   <div class="container">
     <h1>Thank You!</h1>
     <p>You've successfully unlocked your key. Use it to access the content!</p>
-    <div class="key">ABC123-KEY-EXAMPLE</div>
+    <div class="key" id="key"></div>
     <button onclick="copyKey()">Copy Key</button>
   </div>
 
   <script>
+    // Function to generate a random 8-character key
+    function generateRandomKey() {
+      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      let key = '';
+      for (let i = 0; i < 8; i++) {
+        key += characters.charAt(Math.floor(Math.random() * characters.length));
+      }
+      return key;
+    }
+
+    // Display the random key
+    document.getElementById('key').textContent = generateRandomKey();
+
+    // Copy key to clipboard function
     function copyKey() {
       const keyElement = document.querySelector('.key');
       const range = document.createRange();
